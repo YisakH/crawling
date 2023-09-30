@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-deployment-name
+  namespace: yshong
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: your-container-name
+        image: yisakh/crawling:latest
+        env:
+        - name: MONGO_URL
+          value: "drm05003.iptime.org"
+        - name: MONGO_PORT
+          value: "27017"
+        - name: MONGO_DB
+          value: "crawling"
+        - name: MONGO_COL
+          value: "ppomppu"

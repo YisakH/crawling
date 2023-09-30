@@ -62,7 +62,8 @@ def f_get_list():
             board_data = {
                 'time': dates[i],
                 'title': titles[i],
-                'link': site_url + links[i]
+                'link': site_url + links[i],
+                'category': int(category)
             }
             
             if(board_data['title'].find('[키워드 알림]') >= 0):
@@ -83,4 +84,4 @@ def f_get_list():
 
 while True:
     f_get_list()
-    time.sleep(10)
+    time.sleep(180)
